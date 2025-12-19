@@ -1,0 +1,252 @@
+/* ===== CSS Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CSS Variables ===== */
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-overlay: rgba(0, 0, 0, 0.75);
+    --accent: #FF828A;
+    --font-main: 'Source Code Pro', monospace;
+    --transition-speed: 0.3s;
+}
+
+/* ===== Base Styles ===== */
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--white);
+    line-height: 1.75;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ===== Background ===== */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, var(--dark-overlay), var(--dark-overlay)),
+                linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    z-index: -1;
+}
+
+/* ===== Container ===== */
+.container {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 5rem 4rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Sections ===== */
+.section {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    width: 100%;
+}
+
+/* ===== Typography ===== */
+.brand {
+    font-size: 1em;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.headline {
+    font-size: 2.75em;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.subheadline {
+    font-size: 1em;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 1.375;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.description {
+    font-size: 1em;
+    line-height: 1.75;
+    margin-top: 2rem;
+}
+
+/* ===== Links ===== */
+a {
+    color: var(--white);
+    text-decoration: underline;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.back-link {
+    display: inline-block;
+    font-size: 0.875em;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== Buttons ===== */
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.875rem 1.5rem;
+    border: 1px solid var(--white);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    font-size: 1em;
+    text-align: center;
+}
+
+.button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ===== Team Section ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.team-photo .placeholder {
+    font-size: 0.875em;
+    opacity: 0.6;
+}
+
+/* ===== Contact Section ===== */
+.email-link {
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 3.5rem 2rem;
+    }
+
+    .headline {
+        font-size: 2em;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .headline {
+        font-size: 1.75em;
+    }
+}
+
+/* ===== Smooth Transitions ===== */
+.section > .content > * {
+    animation: slideIn 0.5s ease-out forwards;
+    animation-delay: calc(var(--item-index, 0) * 0.1s);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
