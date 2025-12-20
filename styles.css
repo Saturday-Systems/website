@@ -39,21 +39,21 @@ body {
     height: 100vh;
     background:
         /* Noise texture overlay */
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="300" height="300" filter="url(%23noise)" opacity="0.05"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="300" height="300" filter="url(%23noise)" opacity="0.15"/></svg>'),
         /* Subtle grid pattern */
         repeating-linear-gradient(
             0deg,
-            rgba(255, 255, 255, 0.03) 0px,
+            rgba(255, 255, 255, 0.08) 0px,
             transparent 1px,
             transparent 40px,
-            rgba(255, 255, 255, 0.03) 41px
+            rgba(255, 255, 255, 0.08) 41px
         ),
         repeating-linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.03) 0px,
+            rgba(255, 255, 255, 0.08) 0px,
             transparent 1px,
             transparent 40px,
-            rgba(255, 255, 255, 0.03) 41px
+            rgba(255, 255, 255, 0.08) 41px
         ),
         /* Dark overlay */
         linear-gradient(to top, var(--dark-overlay), var(--dark-overlay)),
