@@ -214,6 +214,95 @@ a:hover {
     padding: 1rem 0;
 }
 
+/* ===== GTM Resources Section ===== */
+.resource-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.resource-item {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+}
+
+.resource-item:hover {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.resource-item h3 {
+    font-size: 1.25em;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.resource-item p {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ===== Article Section ===== */
+.article-title {
+    font-size: 2em;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.article-content {
+    max-width: 100%;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+}
+
+.article-content h3 {
+    font-size: 1.25em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.article-content ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.article-content ul li {
+    position: relative;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    line-height: 1.75;
+}
+
+.article-content ul li::before {
+    content: "→";
+    position: absolute;
+    left: -0.5rem;
+    color: var(--accent);
+}
+
+.article-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-footer a {
+    color: var(--accent);
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     html {
