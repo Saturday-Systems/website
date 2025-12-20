@@ -39,8 +39,6 @@ function showSection(hash) {
             'home': 'Saturday Systems | Work Less, Live More',
             'work': 'What We Do | Saturday Systems',
             'team': 'The Team | Saturday Systems',
-            'gtm': 'GTM Resources | Saturday Systems',
-            'gtm-engineer': 'What is a GTM Engineer? | Saturday Systems',
             'contact': 'Contact Us | Saturday Systems'
         };
         document.title = titles[sectionId] || titles['home'];
