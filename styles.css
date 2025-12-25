@@ -101,6 +101,13 @@ body {
 }
 
 /* ===== Typography ===== */
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+}
+
 .brand {
     font-size: 1em;
     margin-bottom: 2rem;
